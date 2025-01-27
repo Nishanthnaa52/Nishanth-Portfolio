@@ -1,5 +1,7 @@
 import React from "react";
-import Squares from "./componets/background.jsx"
+import Squares from "./componets/background.jsx";
+import Navber from "./componets/navber.jsx";
+
 const App = () => {
   return (
     <div className="h-screen w-screen relative bg-gray-900">
@@ -13,8 +15,8 @@ const App = () => {
       />
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center z-10 text-white">
-        <h1 className="text-4xl font-bold">Hi, I am Nishanth</h1>
+      <div className="container absolute inset-0 flex justify-center z-10 text-white mx-auto">
+         <Navber />
       </div>
     </div>
   );
