@@ -1,10 +1,12 @@
 import React from "react";
 import Squares from "./componets/background.jsx";
 import Navber from "./componets/navber.jsx";
+import HeroSection from "./componets/herosection.jsx";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen relative bg-gray-900">
+    <>
+    <div className=" relative h-screen w-screen bg-gray-900">
       {/* Squares Background */}
       <Squares 
         speed={0.2} 
@@ -14,11 +16,15 @@ const App = () => {
         hoverFillColor='green'
       />
 
-      {/* Content */}
-      <div className="container absolute inset-0 flex justify-center z-10 text-white mx-auto">
-         <Navber />
-      </div>
+      
     </div>
+
+    {/* Content */}
+      <div className="container absolute inset-0 flex flex-col z-10 text-white mx-auto">
+         <Navber />
+         <HeroSection />
+      </div>
+    </>
   );
 };  
 
