@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.svg";
+import "../css/Navbar.css";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -26,7 +27,7 @@ function Navber() {
                 }}
                 
                 className="w-13 h-13 rounded-full border-4 border-green-500 object-cover" src={logo} alt="logo" />
-                <p className="sm:text-2xl text-1xl font-bold px-5">Nishanth Dev</p>
+                <p className="text-green-500 sm:text-2xl text-1xl font-bold px-5 tracking-normal hover:tracking-[5px] transition-all duration-300 ease-in-out">Nishanth Dev</p>
             </div>
             <div className="flex items-center justify-center gap-4 text-2xl">
                 <motion.a 
