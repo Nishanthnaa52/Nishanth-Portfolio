@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/logo.svg";
-import "../css/Navbar.css";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
