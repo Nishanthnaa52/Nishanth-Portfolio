@@ -39,7 +39,7 @@ function HeroSection() {
           Frontend Developer <span className="text-gray-500">||</span> Cybersecurity Enthusiast
         </p>
         <TrueFocus 
-          sentence="Web Develoment"
+          sentence="Web Development"
           manualMode={false}
           blurAmount={8}
           borderColor="red"
