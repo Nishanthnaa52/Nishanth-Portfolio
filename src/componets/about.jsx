@@ -10,7 +10,7 @@ function About() {
 	};
 
 	return (
-		<div className="flex flex-col py-10 sm:py-50 sm:flex-row items-center justify-center h-fit w-full px-6 py-10 sm:py-20">
+		<div className="flex flex-col sm:flex-row items-center justify-center h-fit w-full px-6 py-40 sm:py-20">
 
 			{/* About Content */}
 			<motion.div
@@ -18,9 +18,9 @@ function About() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.6 }}
-				className="text-center sm:text-left sm:w-1/2 p-10	"
+				className="text-center sm:ml-15 sm:text-left sm:w-1/2 p-10 "
 			>
-				<h1 className="text-4xl sm:text-5xl font-bold text-green-500 hover:text-red-500 transition-all duration-300 ease-in-out ">
+				<h1 className="inline text-4xl sm:text-5xl font-bold text-green-500 hover:text-red-500 transition-all duration-300 ease-in-out pb-10">
 					About Me
 				</h1>
 				<p className="text-lg sm:text-xl text-green-400 mt-4">

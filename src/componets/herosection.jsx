@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import myPhoto from "../assets/myPhoto.jpg";
+import TrueFocus from "./focus.jsx";
 
 function HeroSection() {
   const PopAnimation = {
@@ -18,7 +19,7 @@ function HeroSection() {
   });
 
   return (
-    <div className="flex flex-col py-20 sm:py-10 sm:flex-row items-center justify-center h-fit w-full px-6 mt-10 sm:mt-0 ">
+    <div className="flex flex-col sm:py-20 sm:flex-row items-center justify-center h-fit w-full px-6 mt-10 sm:mt-0 ">
 
       {/* Profile Image */}
       <motion.div {...getMotionProps(-100, 0, 1, 1.8)} className="flex justify-center w-full sm:w-1/2">
@@ -37,6 +38,14 @@ function HeroSection() {
         <p className="text-lg sm:text-xl py-3 text-green-400 hover:text-red-500">
           Frontend Developer <span className="text-gray-500">||</span> Cybersecurity Enthusiast
         </p>
+        <TrueFocus 
+          sentence="Web Develoment"
+          manualMode={false}
+          blurAmount={8}
+          borderColor="red"
+          animationDuration={1}
+          pauseBetweenAnimations={1}
+        />
       </motion.div>
 
     </div>
