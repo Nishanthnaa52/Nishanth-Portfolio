@@ -2,8 +2,10 @@ import React from "react";
 import { useEffect } from "react";
 import Squares from "./componets/background.jsx";
 import Navber from "./componets/navber.jsx";
+import ReanderButton from "./componets/pageReander.jsx";
 import HeroSection from "./componets/herosection.jsx";
-import About from "./componets/about.jsx";
+//import About from "./componets/about.jsx";
+
 
 const App = () => {
   useEffect(() => {
@@ -27,8 +29,8 @@ const App = () => {
       {/* Content */}
       <div className="relative min-h-screen w-full flex flex-col z-10 text-white overflow-x-hidden">
         <Navber />
-        <HeroSection />
-        <About />
+        <ReanderButton />
+        <HeroSection />    
       </div>
     </>
   );

@@ -58,7 +58,7 @@ const TrueFocus = ({
 
   return (
     <div
-      className="relative flex gap-4 justify-center items-center flex-wrap"
+      className="relative flex gap-2 justify-center items-center flex-wrap"
       ref={containerRef}
     >
       {words.map((word, index) => {
@@ -67,7 +67,7 @@ const TrueFocus = ({
           <span
             key={index}
             ref={(el) => (wordRefs.current[index] = el)}
-            className="relative font-black cursor-pointer text-green-400 text-[25px] sm:text-6xl pt-1"
+            className="relative font-black cursor-pointer text-[10px] sm:text-2xl py-3 text-green-400 hover:text-red-500"
             style={{
               filter: manualMode
                 ? isActive
@@ -89,7 +89,7 @@ const TrueFocus = ({
       })}
 
       <motion.div
-        className="absolute top-0 left-0 pointer-events-none box-border border-0"
+        className="absolute text-center top-0 left-0 pointer-events-none box-border border-0"
         animate={{
           x: focusRect.x,
           y: focusRect.y,
