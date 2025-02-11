@@ -9,6 +9,7 @@ function Skills() {
         { name: 'React', icon: 'react' },
         { name: 'Python', icon: 'python' },
         { name: 'Django', icon: 'django' },
+        { name: 'Bootstrap', icon: 'bootstrap' },
         { name: 'Tailwind', icon: 'tailwind' },
         { name: 'MySql', icon: 'mysql' },
         { name: 'Figma', icon: 'figma' },
@@ -40,7 +41,7 @@ function Skills() {
 
     return (
         <motion.div
-            className="flex flex-wrap justify-center items-center gap-4 px-20 py-15"
+            className="flex flex-wrap justify-center items-center gap-4 px-2 sm:px-20 py-15"
             variants={containerVariants}
             initial="hidden"
             animate="visible"

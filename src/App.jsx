@@ -37,7 +37,7 @@ const App = () => {
       case "Contact":
         return <Contact />;
       default:
-        return <Contact />;
+        return <HeroSection animationDelay={animationDelay} />;
     }
   };
 

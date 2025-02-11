@@ -13,7 +13,7 @@ function ReanderButton({ setActiveComponent }) {
       <ul className="flex gap-2 justify-around flex-wrap px-5 sm:px-20 ">
         {buttonName.map((btnName, btnIndex) => (
           <li
-            className="my-2 bg-green-500 px-4 py-2 font-medium rounded-md border-green-500 border-1 cursor-pointer flex justify-center sm:justify-around sm:rounded-lg hover:scale-105 hover:bg-transparent transform transition duration-200 ease-in-out"
+            className="my-2 bg-green-500 px-4 py-2 font-medium rounded-md border-green-500 border-1 cursor-pointer flex justify-center sm:justify-around sm:rounded-lg hover:scale-105 transform transition duration-200 ease-in-out active:scale-95"
             key={btnIndex}
             onClick={() => setActiveComponent(btnName)}
           >
