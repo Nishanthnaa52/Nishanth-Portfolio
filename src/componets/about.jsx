@@ -10,7 +10,7 @@ function About() {
 	};
 
 	return (
-		<div className="flex flex-col sm:flex-row items-center justify-center h-fit w-full px-6 py-40 sm:py-20">
+		<div className="flex flex-col sm:flex-row items-center justify-center h-fit w-full sm:ml-8 px-6 py-5 sm:py-10">
 
 			{/* About Content */}
 			<motion.div
