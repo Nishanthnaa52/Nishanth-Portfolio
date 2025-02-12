@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
                 alt={project.projectName}
                 className="w-full h-40 object-cover rounded-t-lg mb-4"
             />
-            <h3 className="text-xl font-bold mb-2">{project.projectName}</h3>
+            <h3 className="text-black  text-xl font-bold mb-2">{project.projectName}</h3>
             <p className="text-gray-700 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
                 {project.projectAbout}
             </p>
