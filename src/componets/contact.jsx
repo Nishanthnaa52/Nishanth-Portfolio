@@ -32,7 +32,7 @@ function Contact() {
             <motion.form 
             {...getMotionProps(-100, 0, 1, 1)}
             onSubmit={handleSubmit(onSubmit)} 
-            className="inline-block p-6 rounded-lg shadow-lg w-full max-w-md bg-light-green-100">
+            className="inline-block p-6 rounded-lg shadow-lg w-full max-w-md bg-white">
                 <h2 className="text-green-500 text-[30px] font-bold mb-4">Contact Us</h2>
 
                 <div className="mb-4">
@@ -40,7 +40,7 @@ function Contact() {
                     <input
                         type="text"
                         {...register('name', { required: true })}
-                        className="w-full px-3 py-2 border rounded-lg"
+                        className="w-full px-3 py-2 border rounded-lg border-2 border-black"
                     />
                     {errors.name && <span className="text-red-500">This field is required</span>}
                 </div>
@@ -50,7 +50,7 @@ function Contact() {
                     <input
                         type="email"
                         {...register('email', { required: true })}
-                        className="w-full px-3 py-2 border rounded-lg"
+                        className="w-full px-3 py-2 border rounded-lg border-2 border-black"
                     />
                     {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
@@ -59,7 +59,7 @@ function Contact() {
                     <label className="block text-green-500 text-[20px] ">Message</label>
                     <textarea
                         {...register('message', { required: true })}
-                        className="w-full px-3 py-2 border rounded-lg"
+                        className="w-full px-3 py-2 border rounded-lg border-2 border-black"
                     />
                     {errors.message && <span className="text-red-500">This field is required</span>}
                 </div>

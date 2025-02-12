@@ -4,7 +4,7 @@ import Navber from "./componets/navber.jsx";
 import ReanderButton from "./componets/pageReander.jsx";
 import HeroSection from "./componets/herosection.jsx";
 import Skills from "./componets/skills.jsx";
-import Project from "./componets/projects.jsx";
+import Projects from "./componets/projects.jsx";
 import About from "./componets/about.jsx";
 import Contact from "./componets/contact.jsx";
 
@@ -31,7 +31,7 @@ const App = () => {
       case "Skills":
         return <Skills />;
       case "Project":
-        return <Project />;
+        return <Projects />;
       case "About":
         return <About />;
       case "Contact":
