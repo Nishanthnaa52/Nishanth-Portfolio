@@ -33,7 +33,7 @@ function Contact() {
             {...getMotionProps(-100, 0, 1, 1)}
             onSubmit={handleSubmit(onSubmit)} 
             className="inline-block p-6 rounded-lg shadow-lg w-full max-w-md bg-white">
-                <h2 className="text-green-500 text-[30px] font-bold mb-4">Contact Us</h2>
+                <h2 className="text-green-500 text-[30px] font-bold mb-4">Contact Me</h2>
 
                 <div className="mb-4">
                     <label className="block text-green-500 text-[20px] ">Name</label>
