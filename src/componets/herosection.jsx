@@ -35,7 +35,7 @@ const HeroSection = ({ animationDelay }) => {
           animationDuration={1}
           pauseBetweenAnimations={1}
         />
-        <a href="https://drive.google.com/file/d/1khmNuxfafWahXOmm-Ewm9YmSWbJAZ0Gr/view?usp=sharing" target="_block">
+        <a href="https://drive.google.com/file/d/1vOM_Z4Hk4DyDmW623Doe8Id1ec8lgmG9/view?usp=sharing" target="_block">
           <motion.button
             className="mt-5 px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
             whileTap={{ scale: 0.95 }}
