@@ -40,7 +40,7 @@ function Contact() {
                     <input
                         type="text"
                         {...register('name', { required: true })}
-                        className="w-full px-3 py-2 border rounded-lg border-2 border-black"
+                        className="w-full px-3 py-2 border rounded-lg border-2 border-black text-black"
                     />
                     {errors.name && <span className="text-red-500">This field is required</span>}
                 </div>
@@ -50,7 +50,7 @@ function Contact() {
                     <input
                         type="email"
                         {...register('email', { required: true })}
-                        className="w-full px-3 py-2 border rounded-lg border-2 border-black"
+                        className="w-full px-3 py-2 border rounded-lg border-2 border-black text-black"
                     />
                     {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
@@ -59,7 +59,7 @@ function Contact() {
                     <label className="block text-green-500 text-[20px] ">Message</label>
                     <textarea
                         {...register('message', { required: true })}
-                        className="w-full px-3 py-2 border rounded-lg border-2 border-black"
+                        className="w-full px-3 py-2 border rounded-lg border-2 border-black text-black"
                     />
                     {errors.message && <span className="text-red-500">This field is required</span>}
                 </div>
