@@ -2,23 +2,30 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 function Skills() {
-    const skills = [
+    const frontEndSkills = [
         { name: 'HTML5', icon: 'html' },
         { name: 'CSS3', icon: 'css' },
         { name: 'JavaScript', icon: 'js' },
         { name: 'React', icon: 'react' },
-        { name: 'Python', icon: 'python' },
-        { name: 'Django', icon: 'django' },
         { name: 'Bootstrap', icon: 'bootstrap' },
         { name: 'Tailwind', icon: 'tailwind' },
+    ];
+
+    const backEndSkills = [
+        { name: 'Python', icon: 'python' },
+        { name: 'Django', icon: 'django' },
+    ];
+
+    const databaseSkills = [
         { name: 'MySql', icon: 'mysql' },
+    ];
+
+    const toolsSkills = [
         { name: 'Figma', icon: 'figma' },
         { name: 'Git', icon: 'git' },
         { name: 'GitHub', icon: 'github' },
         { name: 'Linux', icon: 'linux' },
-        { name: 'C', icon: 'c'},
-        { name: 'C++', icon: 'cpp'}
-  
+        { name: 'VS Code', icon: 'vscode' },
     ];
 
     const containerVariants = {
@@ -39,7 +46,12 @@ function Skills() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
     };
 
-    return (
+    const titleVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 1 } },
+    };
+
+    const renderSkills = (skills) => (
         <motion.div
             className="flex flex-wrap justify-center items-center gap-4 px-2 sm:px-20 py-15"
             variants={containerVariants}
@@ -61,6 +73,30 @@ function Skills() {
                 </motion.div>
             ))}
         </motion.div>
+    );
+
+    return (
+        <div>
+            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
+                Front-end Skills
+            </motion.h2>
+            {renderSkills(frontEndSkills)}
+
+            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
+                Back-end Skills
+            </motion.h2>
+            {renderSkills(backEndSkills)}
+
+            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
+                Database Skills
+            </motion.h2>
+            {renderSkills(databaseSkills)}
+
+            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
+                Tools
+            </motion.h2>
+            {renderSkills(toolsSkills)}
+        </div>
     );
 }
 

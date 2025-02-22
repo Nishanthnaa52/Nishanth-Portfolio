@@ -2,17 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import TrueFocus from "./focus.jsx";
 import myPhoto from "../assets/myPhoto.jpg";
+import { FaFileDownload } from 'react-icons/fa';
 
-const HeroSection = ({ animationDelay }) => {
-  const getMotionProps = (startX, endX, duration = 1, delay = animationDelay) => ({
-    initial: { x: startX, opacity: 0 },
-    animate: { x: endX, opacity: 1 },
-    transition: { duration, delay },
-  });
+const getMotionProps = (startX, endX, duration = 1, delay = 0) => ({
+  initial: { x: startX, opacity: 0 },
+  animate: { x: endX, opacity: 1 },
+  transition: { duration, delay },
+});
 
+const HeroSection = () => {
   return (
-    <div className="flex items-center justify-center flex-col sm:py-10 sm:flex-row h-fit w-full px-5 mt-10 sm:mt-0 ">
-
+    <div className="flex items-center justify-center flex-col sm:py-10 sm:flex-row h-fit w-full px-5 mt-10 sm:mt-0">
       {/* Profile Image */}
       <motion.div {...getMotionProps(-100, 0)} className="flex justify-center w-full sm:w-1/2">
         <motion.img
@@ -23,7 +23,7 @@ const HeroSection = ({ animationDelay }) => {
       </motion.div>
 
       {/* Hero Content */}
-      <motion.div {...getMotionProps(100, 0)} className="flex flex-col justify-center items-center font-bold  sm:w-1/2">
+      <motion.div {...getMotionProps(100, 0)} className="flex flex-col justify-center items-center font-bold sm:w-1/2">
         <p className="text-5xl sm:text-7xl text-green-500 hover:text-red-500 hover:tracking-[5px] transition-all duration-300 ease-in-out">
           Nishanth
         </p>
@@ -35,12 +35,13 @@ const HeroSection = ({ animationDelay }) => {
           animationDuration={1}
           pauseBetweenAnimations={1}
         />
-        <a href="https://drive.google.com/file/d/1vOM_Z4Hk4DyDmW623Doe8Id1ec8lgmG9/view?usp=sharing" target="_block">
+        <a href="https://drive.google.com/file/d/1vOM_Z4Hk4DyDmW623Doe8Id1ec8lgmG9/view" target="_block">
           <motion.button
-            className="mt-5 px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex items-center bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 mt-5 rounded-full shadow-lg hover:from-blue-500 hover:to-green-400 transition-all duration-300 ease-in-out"
           >
-            My Resume
+            <FaFileDownload className="mr-2" /> Download Resume
           </motion.button>
         </a>
       </motion.div>
