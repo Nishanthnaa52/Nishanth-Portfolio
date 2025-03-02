@@ -1,12 +1,12 @@
 const projects = [
-    {
-        id: 0,
-        image: "./assets/project_image/todo_app.png",
-        projectName: "Public Todo App (Fullstack)",
-        projectAbout: "This project is a fullstack Todo App. The front-end is built with React and the back-end is powered by Python Django. Through this project, I learned how to develop an end-to-end fullstack application.",  
-        liveLink: "https://todo-frontend-dev.netlify.app/",
-        githubLink: "https://github.com/Nishanthnaa52/Todo-frontend"
-    },
+    // {
+    //     id: 0,
+    //     image: "./assets/project_image/todo_app.png",
+    //     projectName: "Public Todo App (Fullstack)",
+    //     projectAbout: "This project is a fullstack Todo App. The front-end is built with React and the back-end is powered by Python Django. Through this project, I learned how to develop an end-to-end fullstack application.",  
+    //     liveLink: "https://todo-frontend-dev.netlify.app/",
+    //     githubLink: "https://github.com/Nishanthnaa52/Todo-frontend"
+    // },
     {
         id: 1,
         image: "./assets/project_image/shop_porul.png",
