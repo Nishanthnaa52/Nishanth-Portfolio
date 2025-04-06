@@ -7,6 +7,23 @@ const projects = [
     //     liveLink: "https://todo-frontend-dev.netlify.app/",
     //     githubLink: "https://github.com/Nishanthnaa52/Todo-frontend"
     // },
+   
+    {
+        id: 0,
+        image: "./assets/project_image/emica25.png",
+        projectName: "College Symposium site(EMICA25)",
+        projectAbout: "I build a site for our college sympowsium event EMICA25. This site is built with react, tailwind css, etc. this site containe a data for all event detiales, time, place.,",
+        liveLink: "https://emica25.netlify.app/",
+        // githubLink: ""
+    },
+    {
+        id: 0,
+        image: "./assets/project_image/whatsToday22.png",
+        projectName: "What's Today?(weather App)",
+        projectAbout: "This project is a weather app built with React and Tailwind CSS also Integrate data into a graph chart ,Through this project, I learned how to work with APIs and manage state in React.",
+        liveLink: "https://whatstoday22.netlify.app/",
+        // githubLink: ""
+    },
     {
         id: 1,
         image: "./assets/project_image/shop_porul.png",
