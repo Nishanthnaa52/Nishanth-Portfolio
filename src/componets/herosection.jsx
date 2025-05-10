@@ -28,7 +28,7 @@ const HeroSection = () => {
           Nishanth
         </p>
         <TrueFocus
-          sentence="Frontend-Developer Cybersecurity-Enthusiast"
+          sentence="Web-Developer Ethical-hacker Penetration-tester"
           manualMode={false}
           blurAmount={8}
           borderColor="red"
