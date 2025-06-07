@@ -4,7 +4,7 @@ import TrueFocus from "./focus.jsx";
 import myPhoto from "../assets/myPhoto.jpg";
 import { FaFileDownload } from 'react-icons/fa';
 
-const getMotionProps = (startX, endX, duration = 1.8, delay = 0) => ({
+const getMotionProps = (startX, endX, duration = 1.8, delay = 0.8) => ({
   initial: { x: startX, opacity: 0 },
   animate: { x: endX, opacity: 1 },
   transition: { duration, delay },
