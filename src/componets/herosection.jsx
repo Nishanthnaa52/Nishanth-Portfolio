@@ -4,7 +4,7 @@ import TrueFocus from "./focus.jsx";
 import myPhoto from "../assets/myPhoto.jpg";
 import { FaFileDownload } from 'react-icons/fa';
 
-const getMotionProps = (startX, endX, duration = 1, delay = 0) => ({
+const getMotionProps = (startX, endX, duration = 1.8, delay = 0) => ({
   initial: { x: startX, opacity: 0 },
   animate: { x: endX, opacity: 1 },
   transition: { duration, delay },
@@ -35,13 +35,13 @@ const HeroSection = () => {
           animationDuration={1}
           pauseBetweenAnimations={1}
         />
-        <a href="https://drive.google.com/file/d/1vOM_Z4Hk4DyDmW623Doe8Id1ec8lgmG9/view" target="_block">
+        <a href="https://drive.google.com/file/d/16xCXORg6wgLcs42_U_ha4fM3o2n95KO3/view?usp=sharing" target="_block">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-2 px-4 mt-5 rounded-full shadow-lg hover:from-blue-500 hover:to-green-400 transition-all duration-300 ease-in-out"
           >
-            <FaFileDownload className="mr-2" /> Download Resume
+            <FaFileDownload className="mr-2" /> View Resume
           </motion.button>
         </a>
       </motion.div>
