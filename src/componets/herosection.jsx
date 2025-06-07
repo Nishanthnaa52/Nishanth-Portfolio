@@ -35,7 +35,7 @@ const HeroSection = () => {
           animationDuration={1}
           pauseBetweenAnimations={1}
         />
-        <a href="https://drive.google.com/file/d/16xCXORg6wgLcs42_U_ha4fM3o2n95KO3/view?usp=sharing" target="_block">
+        <a href="https://drive.google.com/file/d/1Qk39jrUrVniZTHA-aQuFdKzA5x4hMsFQ/view?usp=sharing" target="_block">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
