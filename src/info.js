@@ -8,6 +8,14 @@ const projects = [
     //     githubLink: "https://github.com/Nishanthnaa52/Todo-frontend"
     // },
     {
+        id: 00,
+        image: "./assets/project_image/Talk2pdf.png",
+        projectName: "Talk2Pdf",
+        projectAbout: "Talk2PDF is a powerful Python Flask-based web application designed to transform static PDF documents into dynamic, interactive learning experiences. By integrating Google Gemini API, the app allows users to chat with any PDF in a natural language interface making it easy to extract information, ask questions, and deeply understand complex content. The application supports image extraction and explanation, enabling users to view images from the PDF in a dedicated section and receive detailed, AI-generated descriptions or context-based answers about those visuals. A built-in chat history section lets users revisit past interactions for reference or review, adding an extra layer of continuity and usability. With its modern, user-friendly interface, Talk2PDF is especially valuable for students, researchers, and digital readers who want to study smarter by engaging directly with documents. Whether it's understanding academic material, analyzing research papers, or reviewing lengthy PDFs, Talk2PDF turns passive reading into active learning.",
+        // liveLink: "https://edumetric.netlify.app/",
+        githubLink: "https://github.com/Nishanthnaa52/Talk2pdf"
+    },
+    {
         id: 0,
         image: "./assets/project_image/edumetric.png",
         projectName: "EduMetric 🎓",
