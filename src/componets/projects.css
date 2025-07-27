@@ -1,0 +1,22 @@
+.scroller {
+    max-width: 100%;
+}
+
+.scroller-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.scroller:hover .scroller-inner {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
