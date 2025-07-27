@@ -9,6 +9,7 @@ function ReanderButton({ setActiveComponent }) {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 2.5 }}
+      className="hidden lg:block" // Show on large screens, hide on smaller ones
     >
       <ul className="flex gap-2 justify-around flex-wrap px-5 sm:px-20 ">
         {buttonName.map((btnName, btnIndex) => (

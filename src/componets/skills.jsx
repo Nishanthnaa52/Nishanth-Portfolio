@@ -77,7 +77,7 @@ function Skills() {
 
     return (
         <div>
-            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
+            <motion.h2 className="text-2xl font-bold text-center text-green-500 pt-10" variants={titleVariants} initial="hidden" animate="visible">
                 Front-end Skills
             </motion.h2>
             {renderSkills(frontEndSkills)}

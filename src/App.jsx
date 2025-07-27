@@ -7,10 +7,13 @@ import Skills from "./componets/skills.jsx";
 import Projects from "./componets/projects.jsx";
 import About from "./componets/about.jsx";
 import Contact from "./componets/contact.jsx";
+import useWindowSize from "./componets/useWindowSize.js";
 
 const App = () => {
   const [activeComponent, setActiveComponent] = useState("Home");
   const [animationDelay, setAnimationDelay] = useState(3);
+  const { width } = useWindowSize();
+  const isDesktop = width >= 1024;
 
   useEffect(() => {
     // Reset animation delay to 0 seconds after initial load
@@ -58,10 +61,21 @@ const App = () => {
       <div className="relative min-h-screen w-full flex flex-col z-10 text-white overflow-x-hidden">
         <Navber />
         <ReanderButton setActiveComponent={handleComponentChange} />
-        {renderComponent()}
+        {isDesktop ? (
+          renderComponent()
+        ) : (
+          <div className="flex flex-col">
+            <div className="min-h-screen"><HeroSection animationDelay={animationDelay} /></div>
+            <div className="min-h-screen"><Skills /></div>
+            <div className="min-h-screen"><Projects /></div>
+            <div className="min-h-screen"><About /></div>
+            <div className="min-h-screen"><Contact /></div>
+          </div>
+        )}
       </div>
     </>
   );
 };
 
 export default App;
+

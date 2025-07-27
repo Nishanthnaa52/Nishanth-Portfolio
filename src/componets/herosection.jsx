@@ -12,7 +12,8 @@ const getMotionProps = (startX, endX, duration = 1.8, delay = 0.8) => ({
 
 const HeroSection = () => {
   return (
-    <div className="flex items-center justify-center flex-col sm:py-10 sm:flex-row h-fit w-full px-5 mt-10 sm:mt-0">
+    <div
+      className="flex items-center justify-center flex-col mt-[20%] sm:mt-[5%] sm:py-10 sm:flex-row h-fit w-full px-5">
       {/* Profile Image */}
       <motion.div {...getMotionProps(-100, 0)} className="flex justify-center w-full sm:w-1/2">
         <motion.img

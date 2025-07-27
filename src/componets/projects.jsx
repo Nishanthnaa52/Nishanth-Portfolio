@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import projects from '../info.js';
+import './projects.css';
 
 function ProjectCard({ project, onClick }) {
     if (!project.liveLink && !project.githubLink) {
@@ -9,7 +10,7 @@ function ProjectCard({ project, onClick }) {
 
     return (
         <motion.div
-            className="bg-white shadow-md rounded-lg p-6 mb-6 min-w-[calc(100%-1rem)] max-w-[calc(100%-1rem)] h-[400px] mx-2 flex flex-col cursor-pointer sm:min-w-[300px] sm:max-w-[300px]"
+            className="bg-white shadow-md rounded-lg p-6 w-[300px] h-[400px] mx-2 flex flex-col cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
@@ -118,35 +119,25 @@ function Projects() {
         setSelectedProject(null);
     };
 
-    const containerVariants = {
-        hidden: { opacity: 1 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-    };
+    const duplicatedProjects = [...projects, ...projects];
 
     return (
         <div>
-            <motion.div
-                className="flex flex-wrap justify-center mt-10"
-                variants={containerVariants}
-                initial="hidden"
+            <motion.h2 
+                className="text-3xl font-bold text-center text-green-500 pt-10" 
+                //variants={titleVariants} 
+                initial="hidden" 
                 animate="visible"
             >
-                {projects.map((project, index) => (
-                    <motion.div key={index} variants={itemVariants}>
-                        <ProjectCard project={project} onClick={() => handleProjectClick(project)} />
-                    </motion.div>
-                ))}
-            </motion.div>
+                    Projects
+            </motion.h2>
+            <div className="scroller pt-10">
+                <div className="scroller-inner">
+                    {duplicatedProjects.map((project, index) => (
+                        <ProjectCard key={index} project={project} onClick={() => handleProjectClick(project)} />
+                    ))}
+                </div>
+            </div>
             <AnimatePresence>
                 {selectedProject && (
                     <ProjectPopup project={selectedProject} onClose={handleClosePopup} />
