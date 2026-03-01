@@ -119,21 +119,18 @@ function Projects() {
         setSelectedProject(null);
     };
 
-    const duplicatedProjects = [...projects, ...projects];
-
     return (
         <div>
             <motion.h2 
                 className="text-3xl font-bold text-center text-green-500 pt-10" 
-                //variants={titleVariants} 
                 initial="hidden" 
                 animate="visible"
             >
-                    Projects
+                Projects
             </motion.h2>
-            <div className="scroller pt-10">
-                <div className="scroller-inner">
-                    {duplicatedProjects.map((project, index) => (
+            <div className="pt-10">
+                <div className="flex flex-wrap justify-center gap-8">
+                    {projects.map((project, index) => (
                         <ProjectCard key={index} project={project} onClick={() => handleProjectClick(project)} />
                     ))}
                 </div>

@@ -1,22 +1,3 @@
-.scroller {
-    max-width: 100%;
-}
-
-.scroller-inner {
-    display: flex;
-    flex-wrap: nowrap;
-    width: max-content;
-    animation: scroll 20s linear infinite;
-}
-
-.scroller:hover .scroller-inner {
-    animation-play-state: paused;
-}
-
-@keyframes scroll {
-    to {
-        transform: translateX(-50%);
-    }
-}
+/* Removed scroller and scroller-inner classes and keyframes for scroll animation. No auto-scroll styles needed for normal grid. */
 
 
