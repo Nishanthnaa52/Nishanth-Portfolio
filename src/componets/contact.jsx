@@ -21,18 +21,26 @@ function Contact() {
         });
     };
 
-    const getMotionProps = (startX, endX, duration = 1, delay) => ({
-        initial: { x: startX, opacity: 0 },
-        animate: { x: endX, opacity: 1 },
-        transition: { duration, delay },
-    });
+    // Animation helpers
+    const fadeInLeft = {
+        initial: { x: -60, opacity: 0 },
+        animate: { x: 0, opacity: 1 },
+        transition: { duration: 0.7 }
+    };
+    const fadeInRight = {
+        initial: { x: 60, opacity: 0 },
+        animate: { x: 0, opacity: 1 },
+        transition: { duration: 0.7, delay: 0.2 }
+    };
 
     return (
         <div className="flex items-center justify-center flex-col sm:py-10 sm:flex-row h-fit w-full px-5 mt-10 sm:mt-0">
             <motion.form 
-            {...getMotionProps(-100, 0, 1, 1)}
-            onSubmit={handleSubmit(onSubmit)} 
-            className="inline-block p-6 rounded-lg shadow-lg w-full max-w-md bg-white">
+                initial={fadeInLeft.initial}
+                animate={fadeInLeft.animate}
+                transition={fadeInLeft.transition}
+                onSubmit={handleSubmit(onSubmit)} 
+                className="inline-block p-6 rounded-lg shadow-lg w-full max-w-md bg-white">
                 <h2 className="text-green-500 text-[30px] font-bold mb-4">Contact Me</h2>
 
                 <div className="mb-4">
@@ -64,14 +72,18 @@ function Contact() {
                     {errors.message && <span className="text-red-500">This field is required</span>}
                 </div>
 
-                <button type="submit" className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300">
+                <motion.button type="submit" className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300"
+                    whileHover={{ scale: 1.07 }}
+                    whileTap={{ scale: 0.95 }}>
                     Submit
-                </button>
+                </motion.button>
             </motion.form>
 
             <motion.div 
-            {...getMotionProps(100, 0, 1, 1)} 
-            className='flex flex-col justify-start items-center font-bold  sm:w-1/2 sm:h-[370px]'>
+                initial={fadeInRight.initial}
+                animate={fadeInRight.animate}
+                transition={fadeInRight.transition}
+                className='flex flex-col justify-start items-center font-bold  sm:w-1/2 sm:h-[370px]'>
 
                 <p className="text-green-500 text-[30px] font-bold mb-4">Social media</p>
                 <div className='flex gap-5'>
@@ -80,6 +92,9 @@ function Contact() {
                             src={`https://skillicons.dev/icons?i=instagram`}
                             alt="instagram"
                             className="w-16 h-16 mb-2"
+                            style={{ transition: 'transform 0.3s' }}
+                            onMouseOver={e => e.currentTarget.style.transform = 'scale(1.1)'}
+                            onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
                         />
                     </a>
                     <a href="https://www.linkedin.com/in/nishanthnaa52/" target='_block'>
@@ -87,6 +102,9 @@ function Contact() {
                             src={`https://skillicons.dev/icons?i=linkedin`}
                             alt="linkedin"
                             className="w-16 h-16 mb-2"
+                            style={{ transition: 'transform 0.3s' }}
+                            onMouseOver={e => e.currentTarget.style.transform = 'scale(1.1)'}
+                            onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
                         />
                     </a>
                 </div>

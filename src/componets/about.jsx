@@ -6,7 +6,7 @@ function About() {
 	// Animation properties
 	const fadeIn = {
 		hidden: { opacity: 0, y: 50 },
-		visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+		visible: { opacity: 1, y: 0, transition: { duration: 1, staggerChildren: 0.15 } },
 	};
 
 	return (
@@ -20,15 +20,30 @@ function About() {
 				viewport={{ once: true, amount: 0.6 }}
 				className="text-center sm:ml-15 sm:text-left sm:w-1/2 p-10 "
 			>
-				<h1 className="inline text-4xl sm:text-5xl font-bold text-green-500 hover:text-red-500 transition-all duration-300 ease-in-out pb-10">
+				<motion.h1
+					className="inline text-4xl sm:text-5xl font-bold text-green-500 hover:text-red-500 transition-all duration-300 ease-in-out pb-10"
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.7 }}
+				>
 					About Me
-				</h1>
-				<p className="text-lg sm:text-xl text-green-400 mt-4">
+				</motion.h1>
+				<motion.p
+					className="text-lg sm:text-xl text-green-400 mt-4"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.7, delay: 0.2 }}
+				>
 					Hello, I'm <span className="text-green-500 font-semibold">Nishanth</span>, a passionate Frontend Developer and Tech Enthusiast with a strong foundation in Python and web application development.
-				</p>
-				<p className="text-lg sm:text-xl text-green-500 mt-4">
+				 </motion.p>
+				<motion.p
+					className="text-lg sm:text-xl text-green-500 mt-4"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.7, delay: 0.4 }}
+				>
 					Currently pursuing my Engineering, I am deeply interested in Linux, open-source contributions, and exploring the fascinating world of cybersecurity.
-				</p>
+				</motion.p>
 			</motion.div>
 
 			{/* About Image */}
@@ -43,6 +58,9 @@ function About() {
 					className="w-40 h-40 sm:w-60 sm:h-60 object-cover rounded-[50px] border-4 border-green-500"
 					src={logo}
 					alt="About Me"
+					initial={{ opacity: 0, scale: 0.95 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.7, delay: 0.6 }}
 				/>
 			</motion.div>
 

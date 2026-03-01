@@ -28,75 +28,127 @@ function Skills() {
         { name: 'VS Code', icon: 'vscode' },
     ];
 
+    // Animation variants for staggered entrance
     const containerVariants = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 40 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1,
-                delayChildren: 0.3,
-                staggerChildren: 0.2,
+                staggerChildren: 0.12,
+                duration: 0.7,
             },
         },
     };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    const cardVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
 
-    const titleVariants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 1 } },
-    };
-
-    const renderSkills = (skills) => (
+    return (
         <motion.div
-            className="flex flex-wrap justify-center items-center gap-4 px-2 sm:px-20 py-15"
+            className="flex flex-col sm:flex-row justify-center items-stretch gap-8 pt-10 bg-white rounded-2xl shadow-2xl p-4 mx-2"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
         >
-            {skills.map((skill, index) => (
-                <motion.div
-                    key={index}
-                    className="flex flex-col items-center bg-green-500 text-white p-4 rounded-lg shadow-lg hover:bg-green-600 transition duration-300 ease-in-out w-32 h-32"
-                    variants={itemVariants}
-                >
-                    <img
-                        src={`https://skillicons.dev/icons?i=${skill.icon}`}
-                        alt={skill.name}
-                        className="w-16 h-16 mb-2"
-                    />
-                    <div className="text-xl font-semibold px-2">{skill.name}</div>
+            <motion.div
+                className="flex-1 flex flex-col items-center border-b-2 sm:border-b-0 sm:border-r-2 border-green-200 px-4 py-4"
+                variants={cardVariants}
+            >
+                <h2 className="text-2xl font-bold text-green-500 mb-4">Front-end Skills</h2>
+                <motion.div className="flex flex-wrap justify-center gap-4" variants={containerVariants}>
+                    {frontEndSkills.map((skill, index) => (
+                        <motion.div
+                            key={index}
+                            className="flex flex-col items-center bg-white text-green-500 border border-green-300 p-3 rounded-lg shadow hover:bg-green-100 transition duration-300 w-24 h-24"
+                            variants={cardVariants}
+                            whileHover={{ scale: 1.08, boxShadow: '0 8px 24px rgba(34,197,94,0.15)' }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <img
+                                src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                                alt={skill.name}
+                                className="w-10 h-10 mb-1"
+                            />
+                            <div className="text-base font-semibold text-center">{skill.name}</div>
+                        </motion.div>
+                    ))}
                 </motion.div>
-            ))}
+            </motion.div>
+            <motion.div
+                className="flex-1 flex flex-col items-center border-b-2 sm:border-b-0 sm:border-r-2 border-green-200 px-4 py-4"
+                variants={cardVariants}
+            >
+                <h2 className="text-2xl font-bold text-green-500 mb-4">Back-end Skills</h2>
+                <motion.div className="flex flex-wrap justify-center gap-4" variants={containerVariants}>
+                    {backEndSkills.map((skill, index) => (
+                        <motion.div
+                            key={index}
+                            className="flex flex-col items-center bg-white text-green-500 border border-green-300 p-3 rounded-lg shadow hover:bg-green-100 transition duration-300 w-24 h-24"
+                            variants={cardVariants}
+                            whileHover={{ scale: 1.08, boxShadow: '0 8px 24px rgba(34,197,94,0.15)' }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <img
+                                src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                                alt={skill.name}
+                                className="w-10 h-10 mb-1"
+                            />
+                            <div className="text-base font-semibold text-center">{skill.name}</div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </motion.div>
+            <motion.div
+                className="flex-1 flex flex-col items-center border-b-2 sm:border-b-0 sm:border-r-2 border-green-200 px-4 py-4"
+                variants={cardVariants}
+            >
+                <h2 className="text-2xl font-bold text-green-500 mb-4">Database Skills</h2>
+                <motion.div className="flex flex-wrap justify-center gap-4" variants={containerVariants}>
+                    {databaseSkills.map((skill, index) => (
+                        <motion.div
+                            key={index}
+                            className="flex flex-col items-center bg-white text-green-500 border border-green-300 p-3 rounded-lg shadow hover:bg-green-100 transition duration-300 w-24 h-24"
+                            variants={cardVariants}
+                            whileHover={{ scale: 1.08, boxShadow: '0 8px 24px rgba(34,197,94,0.15)' }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <img
+                                src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                                alt={skill.name}
+                                className="w-10 h-10 mb-1"
+                            />
+                            <div className="text-base font-semibold text-center">{skill.name}</div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </motion.div>
+            <motion.div
+                className="flex-1 flex flex-col items-center px-4 py-4"
+                variants={cardVariants}
+            >
+                <h2 className="text-2xl font-bold text-green-500 mb-4">Tools</h2>
+                <motion.div className="flex flex-wrap justify-center gap-4" variants={containerVariants}>
+                    {toolsSkills.map((skill, index) => (
+                        <motion.div
+                            key={index}
+                            className="flex flex-col items-center bg-white text-green-500 border border-green-300 p-3 rounded-lg shadow hover:bg-green-100 transition duration-300 w-24 h-24"
+                            variants={cardVariants}
+                            whileHover={{ scale: 1.08, boxShadow: '0 8px 24px rgba(34,197,94,0.15)' }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <img
+                                src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                                alt={skill.name}
+                                className="w-10 h-10 mb-1"
+                            />
+                            <div className="text-base font-semibold text-center">{skill.name}</div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </motion.div>
         </motion.div>
-    );
-
-    return (
-        <div>
-            <motion.h2 className="text-2xl font-bold text-center text-green-500 pt-10" variants={titleVariants} initial="hidden" animate="visible">
-                Front-end Skills
-            </motion.h2>
-            {renderSkills(frontEndSkills)}
-
-            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
-                Back-end Skills
-            </motion.h2>
-            {renderSkills(backEndSkills)}
-
-            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
-                Database Skills
-            </motion.h2>
-            {renderSkills(databaseSkills)}
-
-            <motion.h2 className="text-2xl font-bold text-center text-green-500" variants={titleVariants} initial="hidden" animate="visible">
-                Tools
-            </motion.h2>
-            {renderSkills(toolsSkills)}
-        </div>
     );
 }
 
